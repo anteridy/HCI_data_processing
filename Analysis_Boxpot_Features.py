@@ -3,8 +3,6 @@
 Created on Wed Aug 21 13:23:51 2019
 
 @author: akamnev
-
-Aim: to view QC params as a 384 w/pl layout heatmap
 """
 #%%
 #OS functions
