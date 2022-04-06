@@ -252,14 +252,6 @@ for i in range(1,sampleN):
 print('----------------------------------------------------------------')
 print('---> Finished. Results are saved.')
 
-#%% Temp
-        
-
-#%% Test area
-# param = 'CellFoot_AreaShape_Area'
-# df_x = df_raw.loc[df[param]<1]
-
-
 
 
 
