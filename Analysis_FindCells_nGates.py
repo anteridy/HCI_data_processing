@@ -89,21 +89,6 @@ def forcepath(path):
 DataPath = 'D:\\Temp\\APID\\APID_5_Screen2\\Morpho\\'
 DataFolder = '6_PreProcessed_data\\ImgClassifier\\SC_liveCD8_ann\\'
 DataFile = 'SC_liveCD8_ann_plt'
-# plate = 2
-
-#path to images
-# ImgFolder = '1_Zproj\\Pt'
-# RawImgPath = DataPath+ImgFolder+str(plate).zfill(2)+'\\'
-
-#path to segmentation results (cluster)
-# SegmFolder = '2_ClusterRes\\Pooled\\Plate'
-# SegmImgPath = DataPath+SegmFolder+str(plate).zfill(2)+'\\'
-
-# #Where to save plots
-# PltFolder = '8_SignatureAnalysis\\CellImages\\'
-# # PltPath = 'D:\\Temp\\APID\\APID_5_Screen2\\Morpho\\4_QC\\GatedCells\\RawImages\\' #for final plots
-# ResPath = DataPath+PltFolder
-# forcepath(ResPath)
 
 #Data to remove
 # unw_pids = ['DOCK11','PAK2','THEMIS2']
@@ -133,6 +118,7 @@ plate = 2
 # data_1[param2] = data_1[param2].apply(lambda x: x*0.325) # pxl to um
 
 #gates
+'unquote required block before running the script'
 genotype = 'ND'
 doAll = True
 sel_donors =[]
@@ -522,6 +508,7 @@ for obj in list(range(0,len(df),1)):
         io.imsave(path+img_name, crop)
         
 #%%crop segmentation results
+# 'Choose this if in addition to raw data segmentation results are also needed'
 # for obj in list(range(0,len(df),1)):
     
 #     #Get img id
@@ -565,10 +552,6 @@ for obj in list(range(0,len(df),1)):
 print('----------------------------------------------------------------')
 print('---> Finished. Results are saved.')
 print("Found "+str(cellN)+' cells fitting gates')
-
-#%% Test area
-# plt.scatter(df2gate[gates[0][0]],df2gate[gates[1][0]])
-
 
 
 
